@@ -1,9 +1,7 @@
-import { Elysia } from "elysia";
+import app from "@core/app";
 
-const app = new Elysia()
-	.get("/", () => "Hello Elysia")
-	.listen(process.env.PORT);
-
-console.log(
-	`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`,
+app.listen(process.env.PORT, (server) =>
+	console.log(
+		`🥷 Rogue Backend is running at ${server.hostname}:${server.port}`,
+	),
 );
