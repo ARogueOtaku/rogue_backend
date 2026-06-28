@@ -1,15 +1,31 @@
-# Elysia with Bun runtime
+# Rogue Backend
+
+A minimal API server built with [Elysia](https://elysiajs.com/) on the [Bun](https://bun.sh/) runtime.
 
 ## Getting Started
-To get started with this template, simply paste this command into your terminal:
+
+Install dependencies:
+
 ```bash
-bun create elysia ./elysia-example
+bun install
 ```
 
-## Development
-To start the development server run:
+Start the development server (with watch mode):
+
 ```bash
 bun run dev
 ```
 
-Open http://localhost:3000/ with your browser to see the result.
+The server runs at `http://localhost:3000` (override with `PORT`).
+
+## Scripts
+
+| Script            | Command                          |
+| ----------------- | -------------------------------- |
+| `bun run dev`     | Start dev server with hot reload |
+| `bun run lint`    | Lint with Biome                  |
+| `bun run format`  | Format with Biome                |
+
+## Docs
+
+- `/docs` — Swagger UI (via `@elysiajs/swagger`)
