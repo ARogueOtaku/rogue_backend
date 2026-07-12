@@ -18,7 +18,8 @@
 		"paths": {
 			"@core/*": ["./src/core/*"],
 			"@modules/*": ["./src/modules/*"],
-			"@database/*": ["./src/database/*"]
+			"@database/*": ["./src/database/*"],
+			"@cache/*": ["./src/cache/*"]
 		}
 	}
 }
