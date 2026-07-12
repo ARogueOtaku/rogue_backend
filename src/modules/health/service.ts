@@ -1,4 +1,5 @@
 import client from "@database/client";
+import { sql } from "drizzle-orm";
 import { status } from "elysia";
 
 const HealthService = {
@@ -7,7 +8,7 @@ const HealthService = {
 	},
 	readiness: async () => {
 		try {
-			await client.execute(`SELECT 1`);
+			await client.execute(sql`SELECT 1`);
 			return status(200, "🥷 Rogue Database is Available!");
 		} catch (e) {
 			console.error(e);
