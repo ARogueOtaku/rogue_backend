@@ -14,9 +14,11 @@
 		"noImplicitReturns": true,
 		"noFallthroughCasesInSwitch": true,
 		"exactOptionalPropertyTypes": true,
+		"baseUrl": ".",
 		"paths": {
 			"@core/*": ["./src/core/*"],
-			"@modules/*": ["./src/modules/*"]
+			"@modules/*": ["./src/modules/*"],
+			"@database/*": ["./src/database/*"]
 		}
 	}
 }
