@@ -1,11 +1,11 @@
+import serverConfig from "@core/serverConfig";
 import { defineConfig } from "drizzle-kit";
 
 export default defineConfig({
 	out: "./src/database/gen",
 	schema: "./src/database/schema.ts",
-  dialect: "postgresql",
-  schemaFilter: ["public"],
+	dialect: "postgresql",
 	dbCredentials: {
-		url: process.env.DATABASE_URL,
+		url: serverConfig.DATABASE_URL,
 	},
 });
