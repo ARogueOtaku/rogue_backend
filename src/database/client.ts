@@ -1,5 +1,6 @@
+import serverConfig from "@core/serverConfig";
 import { drizzle } from "drizzle-orm/bun-sql";
 
-const client = drizzle(process.env.DATABASE_URL);
+const client = drizzle(serverConfig.DATABASE_URL);
 
 export default client;
