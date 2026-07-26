@@ -9,9 +9,10 @@ const HealthService = {
 	},
 	readiness: async () => {
 		try {
-      await dbClient.execute(sql`SELECT 1`);
-      const cacheResponse = await cacheClient.send("PING", []);
-      if (`${cacheResponse}`.toUpperCase() !== "PONG") throw new Error("Cache Service did not respond with 'PONG'")
+			await dbClient.execute(sql`SELECT 1`);
+			const cacheResponse = await cacheClient.send("PING", []);
+			if (`${cacheResponse}`.toUpperCase() !== "PONG")
+				throw new Error("Cache Service did not respond with 'PONG'");
 			return status(200, "🥷 Rogue Database and Cache is Available!");
 		} catch (e) {
 			console.error(e);
